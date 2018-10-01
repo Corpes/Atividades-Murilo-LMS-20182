@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trabalho 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .navegador{
+            box-shadow: 2px 2px 200px black;
+            background-color: gray;
+            overflow: hidden;
+        }
+        .navegador ul{
+            list-style-type: none;
+        }
+        .navegador ul li a{
+            text-decoration: none;
+            color: black;
+            max-height: 100px;
+            float: left;
+            padding: 10px; 
+            overflow: hidden;
+            font-family: sans-serif;
+
+        }
+        .navegador ul li div ul li a:hover, .dropdown .botao:hover{
+            background-color: white;
+            cursor: pointer;                                    
+        }
+        .dropdown{
+            float: left;
+            padding: 0px;
+        }
+        .dropdown .botao{
+            padding: 5px;
+            cursor: pointer;
+        }
+        .dropdown .links{
+            position: absolute;
+            background-color: gray;
+            max-height: 0px;
+            overflow: hidden;
+        }
+        .dropdown:hover .links{
+            max-height: 400px;
+            transform: translateY(0em);
+            transition-duration: 2s;
+        }
+
+        .dropdown:hover .botao{
+            background-color: gray;
+            color: white;
+        }
+
+        .container{
+            height: 100px;
+            background-color: blue;
+            margin-top: 5px;
+            box-shadow: 2px 2px 20px black;
+        }
+
+        .navegadoresquerda{
+            background-color:yellow;
+        }
+
+        .menu li a{
+            text-decoration: none;
+            color: black;
+            display: block;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .menu li a:hover{
+            background-color: red;
+        }
+
+        @media screen and (min-width:780px){
+            .navegadoresquerda{
+                box-shadow: 2px 2px 20px black;
+                float: left;
+                width: 200px;
+                height: 1000px;
+                background: linear-gradient(90deg, yellow,yellowgreen); 
+            }
+        }
+
+        @media screen and (min-width:780px){
+            .navegadordireita{
+                box-shadow: 2px 2px 20px black;
+                text-decoration: none;
+                background-color: yellow;
+                float: right;
+                width: 200px;
+                height: 1000px;
+                background: linear-gradient(90deg, yellow,yellowgreen);
+            }
+        }
+        .jogador{
+            margin: 400px;
+            width: 100px;
+            height: 100px;
+            animation-name: rotacionar_mover;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes rotacionar_mover{
+        0%{
+            transform: translate(0, 400px) rotate(0deg)
+        }
+
+        20%{
+            transform: translate(200px, 0) rotate(72deg);
+        }
+
+        40%{
+            transform: translate(400px, 400px) rotate(144deg);
+        }
+
+        60%{
+            transform: translate(0, 200px) rotate(216deg);
+        }
+
+        80%{
+            transform: translate(200px, 200px) rotate(288deg);
+        }
+
+        100%{
+            transform: translate(0, 400px) rotate(360deg);
+        }
+    }
+
+        
+                      
+    </style>
+</head>
+<body>
+    <header>
+        <center><h1>Ronaldinho Aleatório</h1></center>
+    </header>
+    <header>
+        <nav class="navegador">
+            <ul>
+                <li>
+                    <div class="dropdown">
+                        <div class="botao">
+                            <h1>Brasil</h1>
+                        </div>
+                        <div class="links">
+                            <ul class="estilizar">
+                                <li><a href="">Grêmio</a></li><br>
+                                <li><a href="">Flamengo</a></li><br>
+                                <li><a href="">Atlético Mineiro</a></li><br>
+                                <li><a href="">Fluminense</a></li><br>
+                            </ul>
+                        </div>                                                
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <div class="botao">
+                            <h1>Europa</h1>
+                        </div>
+                        <div class="links">
+                            <ul class="estilizar">
+                                <li><a href="">PSG</a></li><br>
+                                <li><a href="">Barcelona</a></li><br>
+                                <li><a href="">Milan</a></li><br>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <div class="botao">
+                            <h1>Outros</h1>
+                        </div>
+                        <div class="links">
+                            <ul class="estilizar">
+                                <li><a href="">Seleção brasileira</a></li><br>
+                                <li><a href="">Queretaro</a></li><br>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <center><h1>NÃO SEJA DIBRADO!</h1></center>
+        <nav class="navegadoresquerda">
+            <ul class="menu">
+                <li><a href=""><h3>Ronaldinho em campo</h3></a></li><br>
+                <li><a href=""><h3>Ronaldinho em rolês aleatórios</h3></a></li><br>
+                <li><a href=""><h3>Ronaldinho jogando quando criança</h3></a></li><br>
+                <li><a href=""><h3>Ronaldinho na seleção</h3></a></li><br>
+            </ul>
+        </nav>
+        <!-- <div class="jogador">
+            <img src="ronaldinho.png" alt="VOCE FOI DIBRADO">
+        </div> -->
+        <nav class="navegadordireita">
+            <h4>Ronaldo de Assis Moreira, mais conhecido como Ronaldinho Gaúcho ou simplesmente Ronaldi, 
+                é um ex-futebolista brasileiro que atuava como meia. Atualmente, é embaixador do Barcelona.
+                Uma de suas marcas registradas é o aspecto dentuço, seus dribles fantásticos e usar uma 
+                faixa na cabeça após adotar os cabelos longos. Extremamente habilidoso e muito preciso em seus chutes e passes, 
+             é considerado por muitos especialistas como o futebolista mais talentoso de sua geração.</h4>
+        </nav>
+        <div class="jogador">
+            <img src="ronaldinho.png" alt="VOCE FOI DIBRADO">
+        </div>  
+    </div>
+</body>
+</html>
